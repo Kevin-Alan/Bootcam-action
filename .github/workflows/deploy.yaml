@@ -1,0 +1,14 @@
+name: Deploy to Production
+
+on: 
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy-to-production:
+    runs-on: ubuntu-latest
+    steps:
+        run: echo "Hacer Pull del código"
+        run: echo "Correr pruebas unitarias"
+        run: echo "generar binario"
+        run: echo "publicar version"
