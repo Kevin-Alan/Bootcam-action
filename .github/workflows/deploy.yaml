@@ -8,6 +8,7 @@ jobs:
   deploy-to-production:
     runs-on: ubuntu-latest
     steps:
+        uses: actions/checkout@v2
         run: echo "Hacer Pull del código"
         run: echo "Correr pruebas unitarias"
         run: echo "generar binario"
