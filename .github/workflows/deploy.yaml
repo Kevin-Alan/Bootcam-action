@@ -18,3 +18,16 @@ jobs:
     steps:
       - name: Hola Mundo 2
         run: echo "Hola Mundo 2"
+
+  third-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Working dir
+        run: ls -al
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Working dir after checkout
+        run: ls -al
