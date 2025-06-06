@@ -12,9 +12,9 @@ jobs:
         run: echo "${MY_ENV_VAR}"
       - name: Asign variable
         id: step_1
-        run: echo "MY_VAR=Hello World" >> $GITHUB_OUTPUT
+        run: echo "my_var=Hello World" >> $GITHUB_OUTPUT
       - name: optener mensaje 
-        run: echo "${{ step.step_1.output.MY_VAR}}"
+        run: echo "${{ step.step_1.outputs.MY_VAR}}"
 
   
   second-job:
