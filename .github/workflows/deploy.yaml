@@ -8,8 +8,14 @@ jobs:
     env:
       MY_ENV_VAR: "Hello World"
     steps:
-      -  name: Hola Mundo
-         run: echo "${MY_ENV_VAR}"
+      - name: Hola Mundo
+        run: echo "${MY_ENV_VAR}"
+      - name: Asign variable
+        id: step_1
+        run: echo "MY_VAR=Hello World" >> $GITHUB_OUTPUT
+      - name: optener mensaje 
+        run: echo "${{ step.step_1.output.MY_VAR}}"
+
   
   second-job:
     if: ${{ github.ref == 'refs/heads/main' }}
@@ -31,3 +37,5 @@ jobs:
 
       - name: Working dir after checkout
         run: ls -al
+
+      - name: Mostrar variable
