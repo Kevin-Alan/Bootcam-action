@@ -1,15 +1,27 @@
-name: Deploy to Production
+# name: Deploy to Production
 
-on: 
-  push:
-    branches: ["main"]
+# on: 
+#   push:
+#     branches: ["main"]
+
+# jobs:
+#   deploy-to-production:
+#     runs-on: ubuntu-latest
+#     steps:
+#       -  uses: actions/checkout@v2
+#       -  run: echo "Hacer Pull del código"
+#       -  run: echo "Correr pruebas unitarias"
+#       -  run: echo "generar binario"
+#       -  run: echo "publicar version"
+
+name: Deploy to server
+
+on: push
 
 jobs:
-  deploy-to-production:
+  first_job:
     runs-on: ubuntu-latest
+    
     steps:
-      -  uses: actions/checkout@v2
-      -  run: echo "Hacer Pull del código"
-      -  run: echo "Correr pruebas unitarias"
-      -  run: echo "generar binario"
-      -  run: echo "publicar version"
+      - name: Hola Mundo
+        reun: echo "Hola Mundo"
