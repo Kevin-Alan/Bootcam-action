@@ -1,11 +1,10 @@
-name: Deploy to server
+name: Deploy to Production
 
 on: push
 
 jobs:
-  first_job:
+  deploy-to-production:
     runs-on: ubuntu-latest
-
     steps:
-     - name: Hola Mundo
-       reun: echo "Hola Mundo"
+      -  name: Hola Mundo
+         run: echo "Hola Mundo"
