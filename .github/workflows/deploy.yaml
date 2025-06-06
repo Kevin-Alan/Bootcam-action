@@ -23,5 +23,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hola Mundo
-        reun: echo "Hola Mundo"
+     - name: Hola Mundo
+       reun: echo "Hola Mundo"
